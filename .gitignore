@@ -7,3 +7,13 @@ server.log
 server.err.log
 server.pid
 tools/
+
+# Android
+android/.gradle/
+android/local.properties
+android/app/build/
+android/build/
+android/*.iml
+android/.idea/
+*.apk
+*.aab

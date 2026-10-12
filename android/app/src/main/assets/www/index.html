@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Загрузчик видео</title>
+  <meta name="description" content="Скачивание видео из Instagram, TikTok, VK и YouTube по ссылке">
+  <meta name="theme-color" content="#070b14">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Загрузчик">
+  <link rel="manifest" href="manifest.webmanifest?v=5">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="style.css?v=5">
+  <script src="config.js"></script>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v12"/><path d="m18 10-6 6-6-6"/><path d="M5 20h14"/></svg>
+      </div>
+      <h1>Скачивай видео <span class="grad">в один клик</span></h1>
+      <p class="sub">
+        <span class="tag">Instagram</span>
+        <span class="tag">TikTok</span>
+        <span class="tag">VK</span>
+        <span class="tag">YouTube</span>
+      </p>
+    </header>
+
+    <form id="form" class="search" autocomplete="off">
+      <button type="button" id="paste" class="icon-btn" title="Вставить из буфера">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+      </button>
+      <input id="url" type="url" inputmode="url" placeholder="Вставьте ссылку на видео...">
+      <button type="button" id="clear" class="icon-btn" title="Очистить" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+    </form>
+
+    <div id="status" class="status" hidden></div>
+
+    <section id="card" class="card" hidden>
+      <div class="thumbwrap">
+        <img id="thumb" alt="">
+        <video id="player" class="player" playsinline controls preload="none" hidden></video>
+        <span id="dur" class="badge" hidden></span>
+      </div>
+      <div class="meta">
+        <div id="title" class="title"></div>
+        <div class="metarow">
+          <span id="uploader" class="uploader"></span>
+          <span id="extra" class="pill"></span>
+        </div>
+      </div>
+      <div class="actions">
+        <div id="quality" class="chips"></div>
+        <a id="dl" class="btn" href="#">Скачать файл</a>
+      </div>
+    </section>
+
+    <footer>работает без авторизации · для личного использования</footer>
+  </main>
+  <script src="app.js?v=5"></script>
+</body>
+</html>

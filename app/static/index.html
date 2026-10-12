@@ -31,12 +31,13 @@
     </header>
 
     <form id="form" class="search" autocomplete="off">
-      <svg class="search-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-      <input id="url" type="url" inputmode="url" placeholder="Вставьте ссылку на видео..." required>
       <button type="button" id="paste" class="icon-btn" title="Вставить из буфера">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
       </button>
-      <button type="submit" id="go">Скачать</button>
+      <input id="url" type="url" inputmode="url" placeholder="Вставьте ссылку на видео...">
+      <button type="button" id="clear" class="icon-btn" title="Очистить" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
     </form>
 
     <div id="status" class="status" hidden></div>
@@ -44,6 +45,7 @@
     <section id="card" class="card" hidden>
       <div class="thumbwrap">
         <img id="thumb" alt="">
+        <video id="player" class="player" playsinline controls preload="none" hidden></video>
         <span id="dur" class="badge" hidden></span>
       </div>
       <div class="meta">
